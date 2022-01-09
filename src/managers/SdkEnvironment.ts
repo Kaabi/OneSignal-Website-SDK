@@ -274,7 +274,7 @@ export default class SdkEnvironment {
       case EnvironmentKind.Staging:
         return new URL(`https://${apiOrigin}/api/v1`);
       case EnvironmentKind.Production:
-        return new URL('https://onesignal.com/api/v1');
+        return new URL('https://api.onesignal.com/api/v1');
       default:
         throw new InvalidArgumentError('buildEnv', InvalidArgumentReason.EnumOutOfRange);
     }
@@ -295,7 +295,7 @@ export default class SdkEnvironment {
         origin = `https://${buildOrigin}`;
         break;
       case EnvironmentKind.Production:
-        origin = "https://onesignal.com";
+        origin = "https://api.onesignal.com";
         break;
       default:
         throw new InvalidArgumentError('buildEnv', InvalidArgumentReason.EnumOutOfRange);
